@@ -1,7 +1,8 @@
-import {sum} from "../src/calculator";
+import {Calculator} from "../src/calculator";
 
 describe('Calculator', () => {
-    it('should calculate sum of two numbers', () => {
-        expect(sum(1, 2)).toEqual(3);
+    it('calculator should sum numbers from string', () => {
+        const calculator = new Calculator();
+        expect(calculator.sum('1,2')).toEqual(3);
     });
 });
